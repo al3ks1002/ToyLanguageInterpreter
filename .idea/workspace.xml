@@ -2,60 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4f7827-e5d2-4990-ac00-d74a42432d91" name="Default" comment="Good console project&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/controller/InterpreterController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/FileData.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/InterpreterException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/ProgramState.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/expressions/ArithmeticExpression.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/expressions/BooleanExpression.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/expressions/ConstantExpression.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/expressions/Expression.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/expressions/HeapReadExpression.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/expressions/VariableExpression.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/AssignmentStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/CloseReadFileStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/CompoundStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/ForkStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/HeapAllocationStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/HeapWriteStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/IfStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/OpenReadFileStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/PrintStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/ReadFileStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/Statement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/model/statements/WhileStatement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/repository/ProgramStateRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/repository/ProgramStateRepositoryImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/ExecutionStack.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/ExecutionStackImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/FileTable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/HeapTable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/Output.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/OutputImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/SymbolTable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/Table.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/generators/FileDescriptorGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/generators/HeapAddressGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/utils/generators/ProgramStateIdGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/view/InterpreterRunner.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/view/TextMenu.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/view/commands/Command.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/view/commands/DeserializeCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/view/commands/ExitCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/view/commands/RunExampleCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToyLanguageInterpreter/view/commands/SerializeCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/alex.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ToyLanguageInterpreter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.txt" afterPath="$PROJECT_DIR$/log.txt" />
     </list>
     <ignored path="ToyLanguageInterpretor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,11 +52,21 @@
       <file leaf-file-name="ProgramState.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/ProgramState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +77,10 @@
             <state relative-caret-position="1155">
               <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#953#954#0" expanded="false" />
+                <element signature="e#994#995#0" expanded="false" />
+                <element signature="e#1056#1057#0" expanded="false" />
+                <element signature="e#1086#1087#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -425,28 +386,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ToyLanguageInterpretor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ToyLanguageInterpreter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ToyLanguageInterpreter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -941,7 +880,7 @@
       <workItem from="1481709926312" duration="1732000" />
       <workItem from="1484411655701" duration="80000" />
       <workItem from="1484602468816" duration="2633000" />
-      <workItem from="1484606211956" duration="503000" />
+      <workItem from="1484606211956" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1484605554462</created>
@@ -982,10 +921,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72763000" />
+    <option name="totallyTimeSpent" value="72904000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1047" extended-state="7" />
+    <frame x="-1" y="0" width="1922" height="1047" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1000,10 +939,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.496875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1163,7 +1102,7 @@
         <state relative-caret-position="210">
           <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="e#377#378#0" expanded="false" />
             <element signature="e#404#405#0" expanded="false" />
           </folding>
@@ -1205,7 +1144,7 @@
         <state relative-caret-position="270">
           <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1215,7 +1154,7 @@
         <state relative-caret-position="135">
           <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1418,7 +1357,7 @@
         <state relative-caret-position="300">
           <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="e#616#617#0" expanded="false" />
             <element signature="e#658#659#0" expanded="false" />
           </folding>
@@ -1450,7 +1389,10 @@
         <state relative-caret-position="1155">
           <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#994#995#0" expanded="false" />
+            <element signature="e#1056#1057#0" expanded="false" />
+            <element signature="e#1086#1087#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1483,8 +1425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/ProgramState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="141">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
