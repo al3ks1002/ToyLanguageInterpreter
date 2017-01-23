@@ -1,36 +1,58 @@
-package view;
+package view.gui;
 
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 import controller.InterpreterController;
+import javafx.collections.FXCollections;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import model.ProgramState;
-import model.expressions.*;
-import model.statements.*;
+import model.expressions.ArithmeticExpression;
+import model.expressions.BooleanExpression;
+import model.expressions.ConstantExpression;
+import model.expressions.HeapReadExpression;
+import model.expressions.VariableExpression;
+import model.statements.AssignmentStatement;
+import model.statements.CloseReadFileStatement;
+import model.statements.CompoundStatement;
+import model.statements.ForkStatement;
+import model.statements.HeapAllocationStatement;
+import model.statements.HeapWriteStatement;
+import model.statements.IfStatement;
+import model.statements.OpenReadFileStatement;
+import model.statements.PrintStatement;
+import model.statements.ReadFileStatement;
+import model.statements.Statement;
+import model.statements.WhileStatement;
 import repository.ProgramStateRepository;
 import repository.ProgramStateRepositoryImpl;
-import view.commands.DeserializeCommand;
-import view.commands.ExitCommand;
-import view.commands.RunExampleCommand;
-import view.commands.SerializeCommand;
 
-public class InterpreterRunner {
-  private static final String logFilePath = "log.txt";
+public class SelectWindowController implements Initializable {
+  private List<Statement> programStatements;
+  private MainWindowController mainWindowController;
 
-  private static ProgramStateRepository getRepository(Statement statement) {
-    ProgramStateRepository repository = new ProgramStateRepositoryImpl(logFilePath);
-    ProgramState initialProgramState = new ProgramState(statement);
-    repository.addProgramState(initialProgramState);
-    return repository;
+  @FXML
+  private ListView<String> programList;
+
+  @FXML
+  private Button executeButton;
+
+  public void setMainWindowController(MainWindowController mainWindowController) {
+    this.mainWindowController = mainWindowController;
   }
 
-  private static InterpreterController getController(Statement statement) {
-    return new InterpreterController(getRepository(statement));
-  }
-
-  public static void main(String[] args) {
+  private void buildProgramStatements() {
         /*
-          a = 2 + 3 * 5;
-          b = a + 1;
-          print(b);
-         */
+        * a = 2 + 3 * 5;
+        * b = a + 1;
+        * print(b);
+        */
     Statement
         ex1 =
         new CompoundStatement(new AssignmentStatement("a",
@@ -229,25 +251,33 @@ public class InterpreterRunner {
                 new CompoundStatement(new PrintStatement(new VariableExpression("v")),
                     new PrintStatement(new HeapReadExpression("a"))))));
 
-    TextMenu textMenu = new TextMenu();
-    textMenu.addCommand(new ExitCommand(0, "Exit."));
-    textMenu.addCommand(new RunExampleCommand(1, ex1.toString(), getController(ex1)));
-    textMenu.addCommand(new RunExampleCommand(2, ex2.toString(), getController(ex2)));
-    textMenu.addCommand(new RunExampleCommand(3, ex3.toString(), getController(ex3)));
-    textMenu.addCommand(new RunExampleCommand(4, ex4.toString(), getController(ex4)));
-    textMenu.addCommand(new RunExampleCommand(5, ex5.toString(), getController(ex5)));
-    textMenu.addCommand(new RunExampleCommand(6, ex6.toString(), getController(ex6)));
-    textMenu.addCommand(new RunExampleCommand(7, ex7.toString(), getController(ex7)));
-    textMenu.addCommand(new RunExampleCommand(8, ex8.toString(), getController(ex8)));
-    textMenu.addCommand(new RunExampleCommand(9, ex9.toString(), getController(ex9)));
-    textMenu.addCommand(new RunExampleCommand(10, ex10.toString(), getController(ex10)));
-    textMenu.addCommand(new RunExampleCommand(11, ex11.toString(), getController(ex11)));
-    textMenu.addCommand(new RunExampleCommand(12, ex12.toString(), getController(ex12)));
-    textMenu.addCommand(new RunExampleCommand(13, ex13.toString(), getController(ex13)));
-    textMenu.addCommand(
-        new SerializeCommand(14, "Serialize program: " + ex1.toString(), getRepository(ex1)));
-    textMenu.addCommand(new DeserializeCommand(15, "Deserialize program.", getRepository(ex2)));
+    programStatements =
+        new ArrayList<>(
+            Arrays.asList(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ex11, ex12, ex13));
+  }
 
-    textMenu.show();
+  private List<String> getStringRepresentations() {
+    return programStatements.stream().map(Statement::toString).collect(Collectors.toList());
+  }
+
+  @Override
+  public void initialize(URL url, ResourceBundle resourceBundle) {
+    buildProgramStatements();
+    programList.setItems(FXCollections.observableArrayList(getStringRepresentations()));
+
+    executeButton.setOnAction(actionEvent -> {
+      int index = programList.getSelectionModel().getSelectedIndex();
+
+      if (index < 0) {
+        return;
+      }
+
+      ProgramState initialProgramState = new ProgramState(programStatements.get(index));
+      ProgramStateRepository repository = new ProgramStateRepositoryImpl("log" + index + ".txt");
+      repository.addProgramState(initialProgramState);
+      InterpreterController interpreterController = new InterpreterController(repository);
+
+      mainWindowController.setInterpreterController(interpreterController);
+    });
   }
 }

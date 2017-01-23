@@ -17,7 +17,6 @@ public class RunExampleCommand extends Command {
       controller.executeAll();
     } catch (InterpreterException e) {
       System.out.println(e.getMessage());
-//            e.printStackTrace();
     }
   }
 }
