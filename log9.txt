@@ -1,0 +1,233 @@
+Program state id: 9
+Execution stack:
+heapAllocation(v, 20) | heapAllocation(a, 22) | heapWrite(a, 30) | print(a) | print(heapRead(a)) | a = 0
+a = 10
+
+Symbol table:
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+heapAllocation(v, 20) | heapAllocation(a, 22) | heapWrite(a, 30) | print(a) | print(heapRead(a)) | a = 0
+
+Symbol table:
+a = 10
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+heapAllocation(a, 22) | heapWrite(a, 30) | print(a) | print(heapRead(a)) | a = 0
+heapAllocation(v, 20)
+
+Symbol table:
+a = 10
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+heapAllocation(a, 22) | heapWrite(a, 30) | print(a) | print(heapRead(a)) | a = 0
+
+Symbol table:
+a = 10
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+heapWrite(a, 30) | print(a) | print(heapRead(a)) | a = 0
+heapAllocation(a, 22)
+
+Symbol table:
+a = 10
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+heapWrite(a, 30) | print(a) | print(heapRead(a)) | a = 0
+
+Symbol table:
+a = 7
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 22
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+print(a) | print(heapRead(a)) | a = 0
+heapWrite(a, 30)
+
+Symbol table:
+a = 7
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 22
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+print(a) | print(heapRead(a)) | a = 0
+
+Symbol table:
+a = 7
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 30
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+print(heapRead(a)) | a = 0
+print(a)
+
+Symbol table:
+a = 7
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 30
+
+Output:
+
+--------------------
+
+Program state id: 9
+Execution stack:
+print(heapRead(a)) | a = 0
+
+Symbol table:
+a = 7
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 30
+
+Output:
+7
+
+--------------------
+
+Program state id: 9
+Execution stack:
+a = 0
+print(heapRead(a))
+
+Symbol table:
+a = 7
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 30
+
+Output:
+7
+
+--------------------
+
+Program state id: 9
+Execution stack:
+a = 0
+
+Symbol table:
+a = 7
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 30
+
+Output:
+7
+30
+
+--------------------
+
+Program state id: 9
+Execution stack:
+
+Symbol table:
+a = 0
+v = 6
+
+File table:
+
+Heap table:
+6 = 20
+7 = 30
+
+Output:
+7
+30
+
+--------------------
+

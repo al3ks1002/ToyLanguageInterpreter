@@ -1,0 +1,94 @@
+Program state id: 11
+Execution stack:
+if (v >= 4) then print(v < 6); else print(v == 6) | print(6 != v)
+v = 6
+
+Symbol table:
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 11
+Execution stack:
+if (v >= 4) then print(v < 6); else print(v == 6) | print(6 != v)
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 11
+Execution stack:
+print(6 != v)
+if (v >= 4) then print(v < 6); else print(v == 6)
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 11
+Execution stack:
+print(6 != v)
+print(v < 6)
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 11
+Execution stack:
+print(6 != v)
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+0
+
+--------------------
+
+Program state id: 11
+Execution stack:
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+0
+0
+
+--------------------
+

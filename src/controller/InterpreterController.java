@@ -19,6 +19,10 @@ public class InterpreterController {
     this.repository = repository;
   }
 
+  public ProgramStateRepository getRepository() {
+    return repository;
+  }
+
   private void executeOneStepForAllPrograms() {
     List<ProgramState> programStates = repository.getProgramStates();
 
@@ -53,6 +57,18 @@ public class InterpreterController {
       programStates.forEach(repository::logProgramState);
       removeCompletedPrograms();
     }
+    executorService.shutdownNow();
+  }
+
+  public void executeOneStepGUI() {
+    executorService = Executors.newFixedThreadPool(8);
+    removeCompletedPrograms();
+    List<ProgramState> programStates = repository.getProgramStates();
+    if(programStates.size() > 0) {
+      executeOneStepForAllPrograms();
+      programStates.forEach(repository::logProgramState);
+    }
+    executorService.shutdownNow();
   }
 
   private void removeCompletedPrograms() {

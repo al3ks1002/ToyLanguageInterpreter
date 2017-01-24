@@ -38,7 +38,7 @@ public class SelectWindowController implements Initializable {
   private MainWindowController mainWindowController;
 
   @FXML
-  private ListView<String> programList;
+  private ListView<String> programListView;
 
   @FXML
   private Button executeButton;
@@ -263,10 +263,10 @@ public class SelectWindowController implements Initializable {
   @Override
   public void initialize(URL url, ResourceBundle resourceBundle) {
     buildProgramStatements();
-    programList.setItems(FXCollections.observableArrayList(getStringRepresentations()));
+    programListView.setItems(FXCollections.observableArrayList(getStringRepresentations()));
 
     executeButton.setOnAction(actionEvent -> {
-      int index = programList.getSelectionModel().getSelectedIndex();
+      int index = programListView.getSelectionModel().getSelectedIndex();
 
       if (index < 0) {
         return;

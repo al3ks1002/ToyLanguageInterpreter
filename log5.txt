@@ -1,0 +1,48 @@
+Program state id: 5
+Execution stack:
+readFile(f + 2, x) | print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
+openReadFile(f, test.in)
+
+Symbol table:
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 5
+Execution stack:
+readFile(f + 2, x) | print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
+
+Symbol table:
+f = 1
+
+File table:
+1 = test.in
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 5
+Execution stack:
+print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
+readFile(f + 2, x)
+
+Symbol table:
+f = 1
+
+File table:
+1 = test.in
+
+Heap table:
+
+Output:
+
+--------------------
+

@@ -10,6 +10,8 @@ public interface ProgramStateRepository extends Serializable {
 
   List<ProgramState> getProgramStates();
 
+  ProgramState getProgramStateWithId(int index);
+
   void logProgramState(ProgramState programState);
 
   void garbageCollectProgramState(ProgramState programState);

@@ -43,6 +43,16 @@ public class ProgramStateRepositoryImpl implements ProgramStateRepository {
   }
 
   @Override
+  public ProgramState getProgramStateWithId(int index) {
+    for (ProgramState programState : programStates) {
+      if (programState.getId() == index) {
+        return programState;
+      }
+    }
+    return null;
+  }
+
+  @Override
   public void logProgramState(ProgramState programState) {
     try (PrintWriter logFileWriter = new PrintWriter(new FileWriter(logFilepath, true))) {
       logFileWriter.printf("Program state id: %d\n", programState.getId());

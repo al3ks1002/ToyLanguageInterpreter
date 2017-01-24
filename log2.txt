@@ -1,0 +1,30 @@
+Program state id: 2
+Execution stack:
+if (a) then v = 2; else v = 3
+b = 2
+
+Symbol table:
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 2
+Execution stack:
+if (a) then v = 2; else v = 3
+
+Symbol table:
+b = 2
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+

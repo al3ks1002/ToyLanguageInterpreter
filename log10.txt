@@ -1,0 +1,224 @@
+Program state id: 10
+Execution stack:
+while (v - 4) then print(v) | v = v - 1 | print(v)
+v = 6
+
+Symbol table:
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 10
+Execution stack:
+while (v - 4) then print(v) | v = v - 1 | print(v)
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+print(v) | v = v - 1
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+v = v - 1
+print(v)
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+v = v - 1
+
+Symbol table:
+v = 6
+
+File table:
+
+Heap table:
+
+Output:
+6
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+
+Symbol table:
+v = 5
+
+File table:
+
+Heap table:
+
+Output:
+6
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+print(v) | v = v - 1
+
+Symbol table:
+v = 5
+
+File table:
+
+Heap table:
+
+Output:
+6
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+v = v - 1
+print(v)
+
+Symbol table:
+v = 5
+
+File table:
+
+Heap table:
+
+Output:
+6
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+v = v - 1
+
+Symbol table:
+v = 5
+
+File table:
+
+Heap table:
+
+Output:
+6
+5
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+while (v - 4) then print(v) | v = v - 1
+
+Symbol table:
+v = 4
+
+File table:
+
+Heap table:
+
+Output:
+6
+5
+
+--------------------
+
+Program state id: 10
+Execution stack:
+print(v)
+
+Symbol table:
+v = 4
+
+File table:
+
+Heap table:
+
+Output:
+6
+5
+
+--------------------
+
+Program state id: 10
+Execution stack:
+
+Symbol table:
+v = 4
+
+File table:
+
+Heap table:
+
+Output:
+6
+5
+4
+
+--------------------
+

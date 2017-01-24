@@ -1,0 +1,46 @@
+Program state id: 3
+Execution stack:
+b = a + 2 / 0 | print(b)
+a = 2 + 3 * 5
+
+Symbol table:
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 3
+Execution stack:
+b = a + 2 / 0 | print(b)
+
+Symbol table:
+a = 17
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 3
+Execution stack:
+print(b)
+b = a + 2 / 0
+
+Symbol table:
+a = 17
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
