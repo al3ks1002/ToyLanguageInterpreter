@@ -15,7 +15,7 @@ public class ForkStatement implements Statement {
   public ProgramState execute(ProgramState programState) {
     return new ProgramState(statement, new ExecutionStackImpl<>(),
         new SymbolTable(programState.getSymbolTable()), programState.getFileTable(),
-        programState.getHeapTable(), programState.getOutput());
+        programState.getHeapTable(), programState.getLockTable(), programState.getOutput());
   }
 
   @Override

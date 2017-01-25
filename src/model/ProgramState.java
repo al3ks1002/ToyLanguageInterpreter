@@ -12,17 +12,19 @@ public class ProgramState implements Serializable {
   private final SymbolTable symbolTable;
   private final FileTable fileTable;
   private final HeapTable heapTable;
+  private final LockTable lockTable;
   private final Output<Integer> output;
 
   public ProgramState(Statement initialProgram, ExecutionStack<Statement> executionStack,
                       SymbolTable symbolTable, FileTable fileTable, HeapTable heapTable,
-                      Output<Integer> output) {
+                      LockTable lockTable, Output<Integer> output) {
     id = ProgramStateIdGenerator.getProgramStateId();
 
     this.executionStack = executionStack;
     this.symbolTable = symbolTable;
     this.fileTable = fileTable;
     this.heapTable = heapTable;
+    this.lockTable = lockTable;
     this.output = output;
 
     executionStack.push(initialProgram);
@@ -30,7 +32,7 @@ public class ProgramState implements Serializable {
 
   public ProgramState(Statement initialProgram) {
     this(initialProgram, new ExecutionStackImpl<>(), new SymbolTable(), new FileTable(),
-        new HeapTable(), new OutputImpl<>());
+        new HeapTable(), new LockTable(), new OutputImpl<>());
   }
 
   public ProgramState executeOneStep() {
@@ -63,6 +65,10 @@ public class ProgramState implements Serializable {
 
   public HeapTable getHeapTable() {
     return heapTable;
+  }
+
+  public LockTable getLockTable() {
+    return lockTable;
   }
 
   public Output<Integer> getOutput() {
