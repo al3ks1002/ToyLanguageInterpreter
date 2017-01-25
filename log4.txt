@@ -1,4 +1,4 @@
-Program state id: 4
+Program state id: 0
 Execution stack:
 readFile(f, x) | print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 openReadFile(f, test.in)
@@ -13,7 +13,7 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 0
 Execution stack:
 readFile(f, x) | print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 
@@ -29,7 +29,7 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 0
 Execution stack:
 print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 readFile(f, x)
@@ -46,7 +46,7 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 0
 Execution stack:
 print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 
@@ -63,7 +63,7 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 0
 Execution stack:
 if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 print(x)
@@ -81,7 +81,7 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 0
 Execution stack:
 if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 
@@ -99,7 +99,7 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 0
 Execution stack:
 closeReadFile(f)
 if (x) then readFile(f, x) | print(x); else print(0)
@@ -118,7 +118,7 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 0
 Execution stack:
 closeReadFile(f)
 readFile(f, x) | print(x)
@@ -134,81 +134,6 @@ Heap table:
 
 Output:
 15
-
---------------------
-
-Program state id: 4
-Execution stack:
-closeReadFile(f)
-print(x)
-readFile(f, x)
-
-Symbol table:
-f = 0
-x = 15
-
-File table:
-0 = test.in
-
-Heap table:
-
-Output:
-15
-
---------------------
-
-Program state id: 4
-Execution stack:
-closeReadFile(f)
-print(x)
-
-Symbol table:
-f = 0
-x = 50
-
-File table:
-0 = test.in
-
-Heap table:
-
-Output:
-15
-
---------------------
-
-Program state id: 4
-Execution stack:
-closeReadFile(f)
-
-Symbol table:
-f = 0
-x = 50
-
-File table:
-0 = test.in
-
-Heap table:
-
-Output:
-15
-50
-
---------------------
-
-Program state id: 4
-Execution stack:
-
-Symbol table:
-f = 0
-x = 50
-
-File table:
-
-Heap table:
-
-Output:
-15
-50
 
 --------------------
 
