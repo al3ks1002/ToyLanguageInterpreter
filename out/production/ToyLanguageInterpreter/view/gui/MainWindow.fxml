@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.MainWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.MainWindowController">
    <children>
       <TableView fx:id="heapTableView" layoutX="16.0" layoutY="25.0" prefHeight="200.0" prefWidth="180.0">
         <columns>
@@ -39,6 +39,13 @@
       <Label layoutX="258.0" layoutY="252.0" text="Symbol table" />
       <TextField fx:id="numberOfProgramStatesTextField" layoutX="87.0" layoutY="521.0" />
       <Label layoutX="86.0" layoutY="505.0" text="Number of program states" />
-      <Button fx:id="executeOneStepButton" layoutX="301.0" layoutY="511.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="105.0" text="Execute one step" />
+      <Button fx:id="executeOneStepButton" layoutX="301.0" layoutY="511.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.0" text="Execute one step" />
+      <TableView fx:id="lockTableView" layoutX="613.0" layoutY="25.0" prefHeight="200.0" prefWidth="180.0">
+        <columns>
+          <TableColumn fx:id="lockIdColumn" prefWidth="85.0" text="Lock ID" />
+          <TableColumn fx:id="programStateIdColumn" prefWidth="94.0" text="PrgState ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="668.0" layoutY="6.0" text="Lock Table" />
    </children>
 </AnchorPane>
