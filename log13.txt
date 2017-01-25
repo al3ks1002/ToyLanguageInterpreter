@@ -1,4 +1,4 @@
-Program state id: 0
+Program state id: 3
 Execution stack:
 heapAllocation(v2, 30) | newLock(x) | fork(fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)) | newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 heapAllocation(v1, 20)
@@ -13,7 +13,7 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 heapAllocation(v2, 30) | newLock(x) | fork(fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)) | newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 
@@ -29,7 +29,7 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 newLock(x) | fork(fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)) | newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 heapAllocation(v2, 30)
@@ -46,7 +46,7 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 newLock(x) | fork(fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)) | newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 
@@ -64,7 +64,7 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 fork(fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)) | newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 newLock(x)
@@ -83,12 +83,12 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 fork(fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)) | newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -102,13 +102,13 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 fork(fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x))
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -122,12 +122,12 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 newLock(q) | fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -141,12 +141,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 4
 Execution stack:
 fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)) | lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -160,13 +160,13 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 newLock(q)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -180,13 +180,13 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 4
 Execution stack:
 lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)
 fork(lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x))
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -200,13 +200,13 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)) | z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -220,12 +220,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 4
 Execution stack:
 lock(x) | heapWrite(v1, heapRead(v1) + 1) | unlock(x)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -239,12 +239,12 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 lock(x) | heapWrite(v1, heapRead(v1) - 1) | unlock(x)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -258,14 +258,14 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 fork(fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q))
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -279,13 +279,13 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 4
 Execution stack:
 heapWrite(v1, heapRead(v1) + 1) | unlock(x)
 lock(x)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -299,72 +299,13 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 heapWrite(v1, heapRead(v1) - 1) | unlock(x)
 lock(x)
 
 Symbol table:
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 20
-1 = 30
-
-Output:
-
---------------------
-
-Program state id: 0
-Execution stack:
-z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
-
-Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 20
-1 = 30
-
-Output:
-
---------------------
-
-Program state id: 1
-Execution stack:
-heapWrite(v1, heapRead(v1) + 1) | unlock(x)
-
-Symbol table:
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 20
-1 = 30
-
-Output:
-
---------------------
-
-Program state id: 2
-Execution stack:
-heapWrite(v1, heapRead(v1) - 1) | unlock(x)
-lock(x)
-
-Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -380,11 +321,11 @@ Output:
 
 Program state id: 3
 Execution stack:
-fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
+z = 200 | z = 300 | z = 400 | z = 500 | lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -398,14 +339,73 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 4
+Execution stack:
+heapWrite(v1, heapRead(v1) + 1) | unlock(x)
+
+Symbol table:
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 20
+1 = 30
+
+Output:
+
+--------------------
+
+Program state id: 5
+Execution stack:
+heapWrite(v1, heapRead(v1) - 1) | unlock(x)
+lock(x)
+
+Symbol table:
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 20
+1 = 30
+
+Output:
+
+--------------------
+
+Program state id: 6
+Execution stack:
+fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)) | m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
+
+Symbol table:
+q = 3
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 20
+1 = 30
+
+Output:
+
+--------------------
+
+Program state id: 3
 Execution stack:
 lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 z = 200 | z = 300 | z = 400 | z = 500
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -419,13 +419,13 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 4
 Execution stack:
 unlock(x)
 heapWrite(v1, heapRead(v1) + 1)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -439,13 +439,13 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 heapWrite(v1, heapRead(v1) - 1) | unlock(x)
 lock(x)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -459,14 +459,14 @@ Output:
 
 --------------------
 
-Program state id: 3
+Program state id: 6
 Execution stack:
 m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
 fork(lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q))
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -480,15 +480,15 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 z = 300 | z = 400 | z = 500
 z = 200
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -502,12 +502,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 4
 Execution stack:
 unlock(x)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -521,13 +521,53 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 heapWrite(v1, heapRead(v1) - 1) | unlock(x)
 lock(x)
 
 Symbol table:
-x = 0
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 21
+1 = 30
+
+Output:
+
+--------------------
+
+Program state id: 6
+Execution stack:
+m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
+
+Symbol table:
+q = 3
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 21
+1 = 30
+
+Output:
+
+--------------------
+
+Program state id: 7
+Execution stack:
+lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)
+
+Symbol table:
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -543,52 +583,12 @@ Output:
 
 Program state id: 3
 Execution stack:
-m = 100 | lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
-
-Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 21
-1 = 30
-
-Output:
-
---------------------
-
-Program state id: 4
-Execution stack:
-lock(q) | heapWrite(v2, heapRead(v2) + 5) | unlock(q)
-
-Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 21
-1 = 30
-
-Output:
-
---------------------
-
-Program state id: 0
-Execution stack:
 lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 z = 300 | z = 400 | z = 500
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 200
 v1 = 0
 v2 = 1
@@ -603,11 +603,11 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 4
 Execution stack:
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -621,12 +621,54 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 heapWrite(v1, heapRead(v1) - 1) | unlock(x)
 
 Symbol table:
-x = 0
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 21
+1 = 30
+
+Output:
+
+--------------------
+
+Program state id: 6
+Execution stack:
+lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
+m = 100
+
+Symbol table:
+q = 3
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 21
+1 = 30
+
+Output:
+
+--------------------
+
+Program state id: 7
+Execution stack:
+heapWrite(v2, heapRead(v2) + 5) | unlock(q)
+lock(q)
+
+Symbol table:
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -641,56 +683,14 @@ Output:
 --------------------
 
 Program state id: 3
-Execution stack:
-lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
-m = 100
-
-Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 21
-1 = 30
-
-Output:
-
---------------------
-
-Program state id: 4
-Execution stack:
-heapWrite(v2, heapRead(v2) + 5) | unlock(q)
-lock(q)
-
-Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 21
-1 = 30
-
-Output:
-
---------------------
-
-Program state id: 0
 Execution stack:
 lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 z = 400 | z = 500
 z = 300
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 200
 v1 = 0
 v2 = 1
@@ -705,13 +705,13 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 unlock(x)
 heapWrite(v1, heapRead(v1) - 1)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -725,13 +725,13 @@ Output:
 
 --------------------
 
-Program state id: 3
+Program state id: 6
 Execution stack:
 lock(q) | heapWrite(v2, heapRead(v2) + 1) | unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 m = 100
@@ -746,13 +746,13 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 7
 Execution stack:
 heapWrite(v2, heapRead(v2) + 5) | unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -766,14 +766,14 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 z = 400 | z = 500
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 300
 v1 = 0
 v2 = 1
@@ -788,12 +788,12 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 unlock(x)
 
 Symbol table:
-x = 0
+x = 2
 v1 = 0
 v2 = 1
 
@@ -807,14 +807,14 @@ Output:
 
 --------------------
 
-Program state id: 3
+Program state id: 6
 Execution stack:
 heapWrite(v2, heapRead(v2) + 1) | unlock(q)
 lock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 m = 100
@@ -829,14 +829,14 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 7
 Execution stack:
 unlock(q)
 heapWrite(v2, heapRead(v2) + 5)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -850,15 +850,15 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 z = 500
 z = 400
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 300
 v1 = 0
 v2 = 1
@@ -873,11 +873,53 @@ Output:
 
 --------------------
 
-Program state id: 2
+Program state id: 5
 Execution stack:
 
 Symbol table:
-x = 0
+x = 2
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 20
+1 = 35
+
+Output:
+
+--------------------
+
+Program state id: 6
+Execution stack:
+heapWrite(v2, heapRead(v2) + 1) | unlock(q)
+lock(q)
+
+Symbol table:
+q = 3
+x = 2
+v1 = 0
+v2 = 1
+m = 100
+
+File table:
+
+Heap table:
+0 = 20
+1 = 35
+
+Output:
+
+--------------------
+
+Program state id: 7
+Execution stack:
+unlock(q)
+
+Symbol table:
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -893,54 +935,12 @@ Output:
 
 Program state id: 3
 Execution stack:
-heapWrite(v2, heapRead(v2) + 1) | unlock(q)
-lock(q)
-
-Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-m = 100
-
-File table:
-
-Heap table:
-0 = 20
-1 = 35
-
-Output:
-
---------------------
-
-Program state id: 4
-Execution stack:
-unlock(q)
-
-Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 20
-1 = 35
-
-Output:
-
---------------------
-
-Program state id: 0
-Execution stack:
 lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
 z = 500
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 400
 v1 = 0
 v2 = 1
@@ -955,14 +955,14 @@ Output:
 
 --------------------
 
-Program state id: 3
+Program state id: 6
 Execution stack:
 heapWrite(v2, heapRead(v2) + 1) | unlock(q)
 lock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 m = 100
@@ -977,33 +977,12 @@ Output:
 
 --------------------
 
-Program state id: 4
+Program state id: 7
 Execution stack:
 
 Symbol table:
-q = 1
-x = 0
-v1 = 0
-v2 = 1
-
-File table:
-
-Heap table:
-0 = 20
-1 = 35
-
-Output:
-
---------------------
-
-Program state id: 0
-Execution stack:
-lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
-
-Symbol table:
-q = 1
-x = 0
-z = 500
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 
@@ -1019,11 +998,32 @@ Output:
 
 Program state id: 3
 Execution stack:
+lock(x) | print(heapRead(v1)) | unlock(x) | lock(q) | print(heapRead(v2)) | unlock(q)
+
+Symbol table:
+q = 3
+x = 2
+z = 500
+v1 = 0
+v2 = 1
+
+File table:
+
+Heap table:
+0 = 20
+1 = 35
+
+Output:
+
+--------------------
+
+Program state id: 6
+Execution stack:
 heapWrite(v2, heapRead(v2) + 1) | unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 m = 100
@@ -1038,14 +1038,14 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(q) | print(heapRead(v2)) | unlock(q)
 lock(x) | print(heapRead(v1)) | unlock(x)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1060,14 +1060,14 @@ Output:
 
 --------------------
 
-Program state id: 3
+Program state id: 6
 Execution stack:
 unlock(q)
 heapWrite(v2, heapRead(v2) + 1)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 m = 100
@@ -1082,15 +1082,15 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(q) | print(heapRead(v2)) | unlock(q)
 print(heapRead(v1)) | unlock(x)
 lock(x)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1105,13 +1105,13 @@ Output:
 
 --------------------
 
-Program state id: 3
+Program state id: 6
 Execution stack:
 unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 m = 100
@@ -1126,14 +1126,14 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(q) | print(heapRead(v2)) | unlock(q)
 print(heapRead(v1)) | unlock(x)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1148,12 +1148,12 @@ Output:
 
 --------------------
 
-Program state id: 3
+Program state id: 6
 Execution stack:
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 v1 = 0
 v2 = 1
 m = 100
@@ -1168,15 +1168,15 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(q) | print(heapRead(v2)) | unlock(q)
 unlock(x)
 print(heapRead(v1))
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1191,14 +1191,14 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(q) | print(heapRead(v2)) | unlock(q)
 unlock(x)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1214,13 +1214,13 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 lock(q) | print(heapRead(v2)) | unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1236,14 +1236,14 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 print(heapRead(v2)) | unlock(q)
 lock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1259,13 +1259,13 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 print(heapRead(v2)) | unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1281,14 +1281,14 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 unlock(q)
 print(heapRead(v2))
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1304,13 +1304,13 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 unlock(q)
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1
@@ -1327,12 +1327,12 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 3
 Execution stack:
 
 Symbol table:
-q = 1
-x = 0
+q = 3
+x = 2
 z = 500
 v1 = 0
 v2 = 1

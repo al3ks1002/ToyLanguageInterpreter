@@ -1,4 +1,4 @@
-Program state id: 0
+Program state id: 1
 Execution stack:
 fork(v = 1 | print(v) | lock(q)) | lock(q)
 newLock(q)
@@ -13,12 +13,12 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 1
 Execution stack:
 fork(v = 1 | print(v) | lock(q)) | lock(q)
 
 Symbol table:
-q = 0
+q = 1
 
 File table:
 
@@ -28,13 +28,13 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 1
 Execution stack:
 lock(q)
 fork(v = 1 | print(v) | lock(q))
 
 Symbol table:
-q = 0
+q = 1
 
 File table:
 
@@ -44,12 +44,12 @@ Output:
 
 --------------------
 
-Program state id: 0
+Program state id: 1
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 
 File table:
 
@@ -59,26 +59,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 v = 1 | print(v) | lock(q)
 
 Symbol table:
-q = 0
-
-File table:
-
-Heap table:
-
-Output:
-
---------------------
-
-Program state id: 0
-Execution stack:
-
-Symbol table:
-q = 0
+q = 1
 
 File table:
 
@@ -89,12 +75,26 @@ Output:
 --------------------
 
 Program state id: 1
+Execution stack:
+
+Symbol table:
+q = 1
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 2
 Execution stack:
 print(v) | lock(q)
 v = 1
 
 Symbol table:
-q = 0
+q = 1
 
 File table:
 
@@ -104,12 +104,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 print(v) | lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -120,13 +120,13 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 print(v)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -137,29 +137,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
-v = 1
-
-File table:
-
-Heap table:
-
-Output:
-1
-
---------------------
-
-Program state id: 1
-Execution stack:
-lock(q)
-
-Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -171,12 +154,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -188,12 +171,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -205,12 +188,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -222,12 +205,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -239,12 +222,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -256,12 +239,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -273,12 +256,12 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
 v = 1
 
 File table:
@@ -290,12 +273,46 @@ Output:
 
 --------------------
 
-Program state id: 1
+Program state id: 2
 Execution stack:
 lock(q)
 
 Symbol table:
-q = 0
+q = 1
+v = 1
+
+File table:
+
+Heap table:
+
+Output:
+1
+
+--------------------
+
+Program state id: 2
+Execution stack:
+lock(q)
+
+Symbol table:
+q = 1
+v = 1
+
+File table:
+
+Heap table:
+
+Output:
+1
+
+--------------------
+
+Program state id: 2
+Execution stack:
+lock(q)
+
+Symbol table:
+q = 1
 v = 1
 
 File table:
