@@ -19,3 +19,4 @@ hs_err_pid*
 *.xml
 log*.txt
 test.in
+out/production/ToyLanguageInterpreter/view/gui/*.fxml
