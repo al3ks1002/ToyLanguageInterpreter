@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.concurrent.locks.Lock;
 import java.util.stream.Collectors;
 import controller.InterpreterController;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -27,6 +28,7 @@ import model.statements.Statement;
 import utils.ExecutionStack;
 import utils.FileTable;
 import utils.HeapTable;
+import utils.LockTable;
 import utils.Output;
 import utils.SymbolTable;
 
@@ -59,6 +61,15 @@ public class MainWindowController implements Initializable {
 
   @FXML
   private TableColumn<Map.Entry<String, Integer>, Integer> symbolTableValueColumn;
+
+  @FXML
+  private TableView<Map.Entry<Integer, Integer>> lockTableView;
+
+  @FXML
+  private TableColumn<Map.Entry<Integer, Integer>, Integer> lockIdColumn;
+
+  @FXML
+  private TableColumn<Map.Entry<Integer, Integer>, Integer> programStateIdColumn;
 
   @FXML
   private ListView<Integer> outputListView;
@@ -153,6 +164,16 @@ public class MainWindowController implements Initializable {
     heapTableView.refresh();
   }
 
+  private void populateLockTable(ProgramState programState) {
+    LockTable lockTable = programState.getLockTable();
+    List<Map.Entry<Integer, Integer>> lockTableList = new ArrayList<>();
+    for (Map.Entry<Integer, Integer> entry : lockTable.getAll()) {
+      lockTableList.add(entry);
+    }
+    lockTableView.setItems(FXCollections.observableList(lockTableList));
+    lockTableView.refresh();
+  }
+
   private void changeProgramState(ProgramState currentProgramState) {
     if (currentProgramState == null) {
       return;
@@ -163,6 +184,7 @@ public class MainWindowController implements Initializable {
     populateOutput(currentProgramState);
     populateFileTable(currentProgramState);
     populateHeapTable(currentProgramState);
+    populateLockTable(currentProgramState);
   }
 
   private void executeOneStep() {
@@ -204,6 +226,10 @@ public class MainWindowController implements Initializable {
     symbolTableVariableColumn
         .setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getKey() + ""));
     symbolTableValueColumn
+        .setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getValue()).asObject());
+    lockIdColumn
+        .setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getKey()).asObject());
+    programStateIdColumn
         .setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getValue()).asObject());
 
     programStateListView.setOnMouseClicked(mouseEvent -> {

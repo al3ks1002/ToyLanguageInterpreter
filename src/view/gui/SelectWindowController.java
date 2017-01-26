@@ -26,10 +26,13 @@ import model.statements.ForkStatement;
 import model.statements.HeapAllocationStatement;
 import model.statements.HeapWriteStatement;
 import model.statements.IfStatement;
+import model.statements.LockStatement;
+import model.statements.NewLockStatement;
 import model.statements.OpenReadFileStatement;
 import model.statements.PrintStatement;
 import model.statements.ReadFileStatement;
 import model.statements.Statement;
+import model.statements.UnlockStatement;
 import model.statements.WhileStatement;
 import repository.ProgramStateRepository;
 import repository.ProgramStateRepositoryImpl;
@@ -252,6 +255,88 @@ public class SelectWindowController implements Initializable {
                 new CompoundStatement(new PrintStatement(new VariableExpression("v")),
                     new PrintStatement(new HeapReadExpression("a"))))));
 
+    ///////////
+
+    Statement a = new HeapAllocationStatement("v1", new ConstantExpression(20));
+    Statement b = new HeapAllocationStatement("v2", new ConstantExpression(30));
+    Statement c = new NewLockStatement("x");
+
+    Statement a1 = new LockStatement("x");
+    Statement
+        b1 =
+        new HeapWriteStatement("v1",
+            new ArithmeticExpression('-', new HeapReadExpression("v1"), new ConstantExpression(1)));
+    Statement c1 = new UnlockStatement("x");
+
+    Statement a2 = new LockStatement("x");
+    Statement
+        b2 =
+        new HeapWriteStatement("v1",
+            new ArithmeticExpression('+', new HeapReadExpression("v1"), new ConstantExpression(1)));
+    Statement c2 = new UnlockStatement("x");
+    Statement
+        d =
+        new ForkStatement(new CompoundStatement(
+            new ForkStatement(new CompoundStatement(a1, new CompoundStatement(b1, c1))),
+            new CompoundStatement(a2, new CompoundStatement(b2, c2))));
+
+    Statement e = new NewLockStatement("q");
+
+    Statement a3 = new LockStatement("q");
+    Statement
+        b3 =
+        new HeapWriteStatement("v2",
+            new ArithmeticExpression('+', new HeapReadExpression("v2"), new ConstantExpression(5)));
+    Statement c3 = new UnlockStatement("q");
+    Statement x = new ForkStatement(new CompoundStatement(a3, new CompoundStatement(b3, c3)));
+
+    Statement a4 = new AssignmentStatement("m", new ConstantExpression(100));
+    Statement b4 = new LockStatement("q");
+    Statement c4 = new HeapWriteStatement("v2",
+        new ArithmeticExpression('+', new HeapReadExpression("v2"), new ConstantExpression(1)));
+    Statement d4 = new UnlockStatement("q");
+    Statement
+        y =
+        new CompoundStatement(a4, new CompoundStatement(b4, new CompoundStatement(c4, d4)));
+
+    Statement f = new ForkStatement(new CompoundStatement(x, y));
+
+    Statement a5 = new AssignmentStatement("z", new ConstantExpression(200));
+    Statement b5 = new AssignmentStatement("z", new ConstantExpression(300));
+    Statement c5 = new AssignmentStatement("z", new ConstantExpression(400));
+    Statement d5 = new AssignmentStatement("z", new ConstantExpression(500));
+    Statement
+        g =
+        new CompoundStatement(a5, new CompoundStatement(b5, new CompoundStatement(c5, d5)));
+
+    Statement a6 = new LockStatement("x");
+    Statement b6 = new PrintStatement(new HeapReadExpression("v1"));
+    Statement c6 = new UnlockStatement("x");
+    Statement h = new CompoundStatement(a6, new CompoundStatement(b6, c6));
+
+    Statement a7 = new LockStatement("q");
+    Statement b7 = new PrintStatement(new HeapReadExpression("v2"));
+    Statement c7 = new UnlockStatement("q");
+    Statement i = new CompoundStatement(a7, new CompoundStatement(b7, c7));
+
+    Statement
+        ex14 =
+        new CompoundStatement(a, new CompoundStatement(b, new CompoundStatement(c,
+            new CompoundStatement(d, new CompoundStatement(e, new CompoundStatement(f,
+                new CompoundStatement(g, new CompoundStatement(h, i))))))));
+
+    ///////////
+
+    Statement
+        ex15 =
+        new CompoundStatement(new NewLockStatement("q"), new CompoundStatement(new ForkStatement(
+            new CompoundStatement(new AssignmentStatement("v", new ConstantExpression(1)),
+                new CompoundStatement(new PrintStatement(new VariableExpression("v")),
+                    new LockStatement("q")))), new LockStatement("q")));
+
+    Statement ex16 = new CompoundStatement(new NewLockStatement("x"), new UnlockStatement("q"));
+    Statement ex17 = new CompoundStatement(new NewLockStatement("x"), new LockStatement("q"));
+
     Statement forS = new ForStatement("v", new ConstantExpression(0), new ConstantExpression(3),
         new ArithmeticExpression('+', new VariableExpression("v"), new ConstantExpression(1)),
         new ForkStatement(
@@ -262,12 +347,14 @@ public class SelectWindowController implements Initializable {
     Statement printS = new PrintStatement(new ArithmeticExpression('*',
         new VariableExpression("v"), new ConstantExpression(10)));
     Statement comp = new CompoundStatement(forS, printS);
-    Statement ex14 =
+    Statement ex18 =
         new CompoundStatement(new AssignmentStatement("v", new ConstantExpression(20)), comp);
 
     programStatements =
         new ArrayList<>(
-            Arrays.asList(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ex11, ex12, ex13, ex14));
+            Arrays
+                .asList(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ex11, ex12, ex13, ex14,
+                    ex15, ex16, ex17, ex18));
   }
 
   private List<String> getStringRepresentations() {

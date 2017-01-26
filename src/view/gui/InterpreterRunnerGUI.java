@@ -16,7 +16,7 @@ public class InterpreterRunnerGUI extends Application {
     MainWindowController mainWindowController = mainLoader.getController();
 
     primaryStage.setTitle("Main Window");
-    primaryStage.setScene(new Scene(mainWindow, 600, 600));
+    primaryStage.setScene(new Scene(mainWindow, 800, 600));
     primaryStage.show();
 
 

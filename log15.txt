@@ -1,0 +1,30 @@
+Program state id: 5
+Execution stack:
+unlock(q)
+newLock(x)
+
+Symbol table:
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
+Program state id: 5
+Execution stack:
+unlock(q)
+
+Symbol table:
+x = 2
+
+File table:
+
+Heap table:
+
+Output:
+
+--------------------
+
