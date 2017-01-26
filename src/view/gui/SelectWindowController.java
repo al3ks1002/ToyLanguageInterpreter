@@ -21,6 +21,7 @@ import model.expressions.VariableExpression;
 import model.statements.AssignmentStatement;
 import model.statements.CloseReadFileStatement;
 import model.statements.CompoundStatement;
+import model.statements.ForStatement;
 import model.statements.ForkStatement;
 import model.statements.HeapAllocationStatement;
 import model.statements.HeapWriteStatement;
@@ -251,9 +252,22 @@ public class SelectWindowController implements Initializable {
                 new CompoundStatement(new PrintStatement(new VariableExpression("v")),
                     new PrintStatement(new HeapReadExpression("a"))))));
 
+    Statement forS = new ForStatement("v", new ConstantExpression(0), new ConstantExpression(3),
+        new ArithmeticExpression('+', new VariableExpression("v"), new ConstantExpression(1)),
+        new ForkStatement(
+            new CompoundStatement(new PrintStatement(new VariableExpression("v")),
+                new AssignmentStatement("v", new ArithmeticExpression('+',
+                    new VariableExpression("v"), new ConstantExpression(1))))));
+
+    Statement printS = new PrintStatement(new ArithmeticExpression('*',
+        new VariableExpression("v"), new ConstantExpression(10)));
+    Statement comp = new CompoundStatement(forS, printS);
+    Statement ex14 =
+        new CompoundStatement(new AssignmentStatement("v", new ConstantExpression(20)), comp);
+
     programStatements =
         new ArrayList<>(
-            Arrays.asList(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ex11, ex12, ex13));
+            Arrays.asList(ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, ex10, ex11, ex12, ex13, ex14));
   }
 
   private List<String> getStringRepresentations() {

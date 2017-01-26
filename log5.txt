@@ -1,4 +1,4 @@
-Program state id: 5
+Program state id: 0
 Execution stack:
 readFile(f + 2, x) | print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 openReadFile(f, test.in)
@@ -13,15 +13,15 @@ Output:
 
 --------------------
 
-Program state id: 5
+Program state id: 0
 Execution stack:
 readFile(f + 2, x) | print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 
 Symbol table:
-f = 1
+f = 0
 
 File table:
-1 = test.in
+0 = test.in
 
 Heap table:
 
@@ -29,16 +29,16 @@ Output:
 
 --------------------
 
-Program state id: 5
+Program state id: 0
 Execution stack:
 print(x) | if (x) then readFile(f, x) | print(x); else print(0) | closeReadFile(f)
 readFile(f + 2, x)
 
 Symbol table:
-f = 1
+f = 0
 
 File table:
-1 = test.in
+0 = test.in
 
 Heap table:
 
